@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  
+
+  <title>How To Use Codex</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="Explaining how to get up and running with the Codex theme for Hugo.">
+  <meta name="keywords" content="gohugo , hugo , go , blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="8cyiY374WL2LGr87fBghcdJCRx6BaPNBvLjeZlk6tyc" />
+
+  
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+  
+<link rel="stylesheet" href="/css/post.css" /> 
+
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/juxsta.github.io"
+      },
+      "articleSection" : "blog",
+      "name" : "How To Use Codex",
+      "headline" : "How To Use Codex",
+      "description" : "Explaining how to get up and running with the Codex theme for Hugo.",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-06-04 09:19:29 -0400 -0400",
+      "dateModified" : "2020-06-04 09:19:29 -0400 -0400",
+      "url" : "https:\/\/juxsta.github.io\/blog\/how-to-use-codex\/",
+      "wordCount" : "377",
+      "keywords" : ["gohugo", "hugo", "go", "blog", "Blog"]
+    }
+  
+  </script>
+
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+     
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+           href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+<div class="post">
+  <header class="post__header">
+    <h1 class="post__title">How To Use Codex</h1>
+    <time datetime="2020-06-04 09:19:29 -0400 -0400" class="post__date"
+      >Jun 4 2020</time
+    >
+  </header>
+  <article class="post__content">
+    
+<p><a href="https://github.com/jakewies/hugo-theme-codex">Codex</a> is a minimal blog theme for <a href="https://gohugo.io/">Hugo</a>.</p>
+<h2 id="getting-started">Getting Started<a class="anchor" href="#getting-started">#</a></h2>
+<p><strong>1. Start a new <code>hugo</code> site</strong></p>
+<pre><code>hugo new site my-new-site
+cd my-new-site
+</code></pre><p><strong>2. Initialize project with <code>git</code></strong></p>
+<pre><code>git init
+</code></pre><p><strong>3. Add <code>hugo-theme-codex</code> as a submodule</strong></p>
+<pre><code>git submodule add https://github.com/jakewies/hugo-theme-codex.git themes/codex
+</code></pre><p><strong>4. List <code>&quot;codex&quot;</code> as the name of your theme in <code>config.toml</code></strong></p>
+<pre><code># config.toml
+
+theme = &quot;codex&quot;
+</code></pre><p><strong>5. Start the server</strong></p>
+<pre><code>hugo server -D
+</code></pre><p>You should now see some default content.</p>
+<h3 id="configuring-the-home-page">Configuring the Home Page<a class="anchor" href="#configuring-the-home-page">#</a></h3>
+<p>The site&rsquo;s home page can be configured by creating a <code>content/_index.md</code> file. This file can use the following frontmatter:</p>
+<pre><code>---
+heading: &quot;Hi, I'm Codex&quot;
+subheading: &quot;A minimal blog theme for hugo.&quot;
+handle: &quot;hugo-theme-codex&quot;
+---
+</code></pre><p>If you would rather override the about page&rsquo;s layout with your own, you can do so by creating a <code>layouts/index.html</code>. You can find the <code>index.html</code> file that <code>hugo-theme-codex</code> uses <a href="https://github.com/jakewies/hugo-theme-codex/blob/master/layouts/index.html">here</a>.</p>
+<h3 id="configuring-social-icons">Configuring Social Icons<a class="anchor" href="#configuring-social-icons">#</a></h3>
+<p>Social Icons are optional. As of right now we support Twitter and GitHub, but more can be supported in the future. To show any of these icons, just provide the value in the <code>[params]</code> section of <code>config.toml</code>.</p>
+<pre><code># config.toml
+
+[params]
+  twitter = &quot;hugo-theme-codex&quot;
+  github = &quot;jakewies/hugo-theme-codex&quot;
+</code></pre><p>If either of these options are given, <code>hugo-theme-codex</code> will render the social icon in the footer.</p>
+<p>See the contents of the <a href="https://github.com/jakewies/hugo-theme-codex/tree/master/exampleSite">example site</a> for more details.</p>
+<p>You can also create additional social icons by replicating the code in <code>partials/social-icons.html</code>. For example, to add an email social icon, you can add the follwing:</p>
+<pre><code>&lt;a class=&quot;social-icons__icon social-icons__icon--email&quot; href=&quot;mailto:youremail@example.com&quot;&gt;&lt;/a&gt;
+</code></pre><p>Note that you also need to add the following css in corresponding css files where social icons are displayed, i.e. <code>about.css</code> and <code>post.css</code>:</p>
+<pre><code>.social-icons__icon--email {
+  background-image: url(&quot;/icons/email.svg&quot;);
+}
+</code></pre><h3 id="creating-a-blog-post">Creating a blog post<a class="anchor" href="#creating-a-blog-post">#</a></h3>
+<p>You can create a new blog post page by going to the root of your project and typing:</p>
+<pre><code>hugo new blog/:blog-post.md
+</code></pre><p>Where <code>:blog-post.md</code> is the name of the file of your new post.</p>
+<p>The theme supports KaTeX which renders math typesetting in markdown document. Simply turn on by <code>math: true</code> in your post.</p>
+<h3 id="tags">Tags<a class="anchor" href="#tags">#</a></h3>
+<p>Right now <code>hugo-theme-codex</code> uses the <code>tags</code> taxonomy for blog posts. You can view all the blog posts of a given tag by going to <code>/tags/:tag-name</code>, where <code>:tag-name</code> is the name of your tag.</p>
+<h3 id="favicon">Favicon<a class="anchor" href="#favicon">#</a></h3>
+<p>To update favicon of the site, replace the one in <code>static/favicon.ico</code> with your own.</p>
+
+
+    
+  </article>
+  
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        <a class="tag__link" href="https://juxsta.github.io/tags/hugo/">hugo</a>
+    </li></ul>
+
+ <div class="pagination">
+  
+
+  
+    <a class="pagination__item" href="https://juxsta.github.io/blog/start-here/">
+      <span class="pagination__label">Next Post</span>
+      <span class="pagination__title" >Start here!!!</a>
+    </a>
+  
+</div>
+
+</div>
+
+  </main>
+
+  
+<footer>
+  <div class="social-icons">
+  
+  
+  <a class="social-icons__icon social-icons__icon--github" href="https://github.com/Juxsta/AnnesAwesomeCodingGuide"></a>
+  
+</div>
+
+  <p></p>
+</footer>
+
+
+  <script src="/js/index.js"></script>
+  
+<script src="/vendor/prism/prism.js"></script>
+
+</body>
+
+</html>

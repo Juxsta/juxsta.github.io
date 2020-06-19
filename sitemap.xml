@@ -8,21 +8,32 @@
   </url>
   
   <url>
-    <loc>https://juxsta.github.io/posts/</loc>
+    <loc>https://juxsta.github.io/blog/</loc>
     <lastmod>2020-06-15T17:59:39-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://juxsta.github.io/posts/start-here/</loc>
+    <loc>https://juxsta.github.io/blog/start-here/</loc>
     <lastmod>2020-06-15T17:59:39-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://juxsta.github.io/categories/</loc>
+    <loc>https://juxsta.github.io/blog/how-to-use-codex/</loc>
+    <lastmod>2020-06-04T09:19:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://juxsta.github.io/tags/hugo/</loc>
+    <lastmod>2020-06-04T09:19:29-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://juxsta.github.io/tags/</loc>
+    <lastmod>2020-06-04T09:19:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://juxsta.github.io/categories/</loc>
   </url>
   
 </urlset>
